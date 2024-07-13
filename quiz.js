@@ -14,11 +14,10 @@ function checkAnswer() {
     // Access the correct answer for the question 
     const correctAnswer = "4";
   
-    // Compare user answer with correct answer
-    const isCorrect = userAnswer === correctAnswer;
+   
   
     // Display feedback based on the result
-    if (isCorrect) {
+    if (userAnswer=== correctAnswer) {
       alert("Correct! Well done.");
     } else {
       alert("That's Incorrect. Try again!");
