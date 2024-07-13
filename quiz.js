@@ -2,11 +2,7 @@ function checkAnswer() {
     // Get the selected radio button using document.querySelector
     const selectedRadio = document.querySelector('input[name="quiz"]:checked');
   
-    // Check if a radio button is selected 
-    if (!selectedRadio) {
-      alert("Please select an answer!");
-      return;
-    }
+
   
     // Extract the user's answer from the selected radio button
     const userAnswer = selectedRadio.value;
