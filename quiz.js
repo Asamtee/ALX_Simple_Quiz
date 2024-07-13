@@ -1,24 +1,30 @@
-//select the checked radio button
-function checkAnswer(){
-const selectedRadioButton= document.querySelector('input[name="quiz"]:checked');
-
-//to access the value property to get user's answer
-const userAnswer = selectedRadioButton.value;
-
-    const correctAnswer = document.querySelector('4').innerHTML;
-    const feedback = document.querySelector('feedback')
-
-    //comparing user answers
-    if(userAnswer===correctAnswer){
-        feedback.innerHTML='Correct! well done';
-        feedback.Style.color='green';
+function checkAnswer() {
+    // Get the selected radio button using document.querySelector
+    const selectedRadio = document.querySelector('input[name="quiz"]:checked');
+  
+    // Check if a radio button is selected 
+    if (!selectedRadio) {
+      alert("Please select an answer!");
+      return;
     }
-    else{
-        feedback.innerHTML="That's incorrect. Try again!";
-        feedback.style.color='red';
+  
+    // Extract the user's answer from the selected radio button
+    const userAnswer = selectedRadio.value;
+  
+    // Access the correct answer for the question 
+    const correctAnswer = "4";
+  
+    // Compare user answer with correct answer
+    const isCorrect = userAnswer === correctAnswer;
+  
+    // Display feedback based on the result
+    if (isCorrect) {
+      alert("Correct! Well done.");
+    } else {
+      alert("That's Incorrect. Try again!");
     }
-}
-
-//button event listener
-const button = document.getElementById(submit-answer);
-button.addEventListener('click',checkAnswer);
+  }
+  
+  // Add event listener to the button 
+  const submitButton = document.getElementById("submit-answer");
+  submitButton.addEventListener("click", checkAnswer);
