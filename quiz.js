@@ -17,10 +17,10 @@ function checkAnswer() {
    
   
     // Display feedback based on the result
-    if (userAnswer=== correctAnswer) {
-      alert("Correct! Well done.");
+   if (userAnswer=== correctAnswer){
+      document.getElementById("feedback").textContent="Correct! Well done";
     } else {
-      alert("That's Incorrect. Try again!");
+    document.getElementById("feedback").textContent="That's incorrect. Try again!";
     }
   }
   
